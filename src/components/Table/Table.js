@@ -1,3 +1,5 @@
+import classes from "./Table.module.css";
+
 const formatter = new Intl.NumberFormat("en-CA", {
   style: "currency",
   currency: "CAD",
@@ -7,7 +9,7 @@ const formatter = new Intl.NumberFormat("en-CA", {
 
 const Table = (props) => {
   return (
-    <table className="result">
+    <table className={classes.result}>
       <thead>
         <tr>
           <th>Year</th>
@@ -38,7 +40,6 @@ const Table = (props) => {
             </td>
           </tr>
         ))}
-        ;
       </tbody>
     </table>
   );
